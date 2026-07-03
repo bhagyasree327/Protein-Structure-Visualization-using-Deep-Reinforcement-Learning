@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Protein Structure Visualizer</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Protein Structure Visualizer</h1>
+
+<p class="subtitle">
+Compare your generated protein with original structure
+</p>
+
+<!-- INPUT SECTION -->
+<div class="input-section">
+
+<h2>Generate Protein Structure</h2>
+<p>Select Protein:</p>
+
+<select id="sequenceDropdown">
+<option value="">-- Select Protein --</option>
+
+<option value="hemoglobin">Hemoglobin</option>
+<option value="insulin">Insulin</option>
+<option value="lysozyme">Lysozyme</option>
+<option value="myoglobin">Myoglobin</option>
+<option value="collagen">Collagen</option>
+<option value="keratin">Keratin</option>
+<option value="actin">Actin</option>
+<option value="tubulin">Tubulin</option>
+<option value="ferritin">Ferritin</option>
+<option value="albumin">Albumin</option>
+<option value="trypsin">Trypsin</option>
+<option value="pepsin">Pepsin</option>
+<option value="chymotrypsin">Chymotrypsin</option>
+<option value="hemocyanin">Hemocyanin</option>
+<option value="cytochrome_c">Cytochrome C</option>
+<option value="elastin">Elastin</option>
+<option value="histone">Histone</option>
+<option value="casein">Casein</option>
+<option value="ovalbumin">Ovalbumin</option>
+<option value="lactase">Lactase</option>
+<option value="amylase">Amylase</option>
+<option value="lipase">Lipase</option>
+<option value="rhodopsin">Rhodopsin</option>
+<option value="opsin">Opsin</option>
+<option value="glucagon">Glucagon</option>
+<option value="prolactin">Prolactin</option>
+<option value="growth_hormone">Growth Hormone</option>
+
+</select>
+
+<br><br>
+
+<button onclick="generateStructure()">Generate Structure</button>
+<button onclick="openColab()">Open Colab</button>
+<button onclick="loadFromColab()">Load Structure</button>
+<p style="color: gray; font-size: 14px;">
+Structure will be generated automatically
+
+</div>
+
+<div class="main-split">
+
+<!-- LEFT PANEL -->
+<div class="panel">
+
+<h2>Your Output</h2>
+
+<div class="upload-box">
+<p>Upload PDB</p>
+<input type="file" id="pdbFile" accept=".pdb">
+</div>
+
+<div class="controls">
+<button onclick="cartoonView1()">Cartoon</button>
+<button onclick="stickView1()">Stick</button>
+<button onclick="sphereView1()">Sphere</button>
+<button onclick="resetView1()">Reset</button>
+</div>
+
+<div id="viewer1"></div>
+
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="panel">
+
+<h2>Original Protein</h2>
+
+<div class="dropdown-box">
+<p>Select Protein</p>
+<select id="proteinSelect">
+<option value="">-- Select Protein --</option>
+<option value="1CRN">Crambin</option>
+<option value="4HHB">Hemoglobin</option>
+<option value="1BNA">DNA</option>
+</select>
+</div>
+
+<div class="controls">
+<button onclick="cartoonView2()">Cartoon</button>
+<button onclick="stickView2()">Stick</button>
+<button onclick="sphereView2()">Sphere</button>
+<button onclick="resetView2()">Reset</button>
+</div>
+
+<div id="viewer2"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

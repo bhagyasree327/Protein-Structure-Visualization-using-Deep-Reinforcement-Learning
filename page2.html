@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Protein Comparison</title>
+
+<link rel="stylesheet" href="/style.css">
+
+<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+
+</head>
+
+<body class="page2">
+
+<div class="container">
+
+<h1>🧬 Protein Comparison</h1>
+
+<div style="margin-bottom:15px;">
+    <a href="/">
+        <button>← Back to Prediction Page</button>
+    </a>
+</div>
+
+<div class="main-split">
+
+<div class="panel">
+<h2>Predicted Protein</h2>
+
+<select id="predictedSelect">
+<option value="">-- Select Predicted Protein --</option>
+</select>
+
+<div style="margin-top:10px;">
+<input type="file" id="uploadPDB" accept=".pdb">
+</div>
+
+<div class="controls">
+<button onclick="cartoonView1(); setActiveButton(this)">Cartoon</button>
+<button onclick="stickView1(); setActiveButton(this)">Stick</button>
+<button onclick="sphereView1(); setActiveButton(this)">Sphere</button>
+<button onclick="resetView1(); setActiveButton(this)">Reset</button>
+</div>
+
+<div id="viewer1"></div>
+</div>
+
+<div class="panel">
+<h2>Original Protein</h2>
+
+<select id="proteinSelect">
+<option value="">-- Select Protein --</option>
+</select>
+
+<div class="controls">
+<button onclick="cartoonView2(); setActiveButton(this)">Cartoon</button>
+<button onclick="stickView2(); setActiveButton(this)">Stick</button>
+<button onclick="sphereView2(); setActiveButton(this)">Sphere</button>
+<button onclick="resetView2(); setActiveButton(this)">Reset</button>
+</div>
+
+<div id="viewer2"></div>
+</div>
+
+</div>
+
+</div>
+
+<script src="/script.js"></script>
+
+</body>
+</html>

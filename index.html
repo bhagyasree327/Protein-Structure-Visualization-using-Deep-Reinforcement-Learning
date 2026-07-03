@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Protein Structure Visualizer</title>
+
+<link rel="stylesheet" href="/style.css">
+
+<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🧬 Protein Structure Visualizer</h1>
+
+<p class="subtitle">Predicted protein structure visualization</p>
+
+<div style="margin-bottom:15px;">
+    <a href="/page2.html">
+        <button>Go to Comparison Page →</button>
+    </a>
+</div>
+
+<div class="instructions">
+1. Select a predicted protein from the dropdown list. <br> 
+2. Upload a custom PDB file (optional).<br> 
+3. View sequence, length, and confidence score (pLDDT).<br> 
+4. Inspect the generated PDB structure in 3D.<br>
+5. Use the comparison page to analyze predicted vs. original structures.
+</div>
+
+<div class="panel">
+<h2>Select Protein</h2>
+
+<select id="predictedSelect">
+<option value="">-- Select Predicted Protein --</option>
+</select>
+</div>
+
+<div class="info-box">
+<p><b>Sequence:</b> <span id="seq">-</span></p>
+<p><b>Length:</b> <span id="len">-</span></p>
+<p><b>pLDDT:</b> <span id="plddt">-</span></p>
+</div>
+
+<h3>Run Output</h3>
+<pre id="logs"></pre>
+
+<h3>PDB File</h3>
+<pre id="pdbText"></pre>
+
+<div class="panel">
+<h2>Your Predicted Protein</h2>
+
+<div class="controls">
+<button onclick="cartoonView1(); setActiveButton(this)">Cartoon</button>
+<button onclick="stickView1(); setActiveButton(this)">Stick</button>
+<button onclick="sphereView1(); setActiveButton(this)">Sphere</button>
+<button onclick="resetView1(); setActiveButton(this)">Reset</button>
+</div>
+
+<div id="viewer1"></div>
+
+</div>
+
+</div>
+
+<script src="/script.js"></script>
+
+</body>
+</html>

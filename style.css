@@ -1,0 +1,239 @@
+/* ===== IMPORT POPPINS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===== BODY (LIGHT BG IMAGE) ===== */
+body{
+margin:0;
+
+/* ✅ DEFAULT FONT */
+font-family: "Times New Roman", serif;
+
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('https://images.squarespace-cdn.com/content/v1/5c0571c05cfd7950e5a84c99/1648716197017-VX8EJZ1N0XSV4CJHCKF2/unsplash-image-Mm1VIPqd0OA.jpg');
+
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+
+color:#f8fafc;
+}
+
+/* ===== HEADINGS (POPPINS) ===== */
+h1, h2, h3{
+font-family: 'Poppins', sans-serif;
+color:#ffffff; 
+}
+
+/* ===== SUBTITLE ===== */
+.subtitle{
+font-family: 'Poppins', sans-serif;
+color:#ffffff;
+margin-bottom:25px;
+font-size:15px;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+max-width:1200px;
+margin:auto;
+text-align:center;
+padding:40px;
+}
+
+/* ===== TITLE ===== */
+h1{
+font-size:36px;
+margin-bottom:8px;
+}
+
+/* ===== INSTRUCTIONS ===== */
+.instructions{
+color:#0f172a; 
+background:#ffffff;
+border:1px solid #4f46e5;
+padding:25px;
+border-radius:12px;
+margin:0 auto 30px;
+max-width:700px;
+text-align:left;
+box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== SPLIT ===== */
+.main-split{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* PAGE 2 FIX */
+.page2 .main-split{
+display:flex !important;
+flex-wrap:nowrap !important;
+gap:20px;
+}
+
+.page2 .panel{
+flex:1;
+min-width:0;
+}
+
+/* ===== PANEL ===== */
+.panel{
+flex:1;
+min-width:350px;
+background:#ffffff;
+padding:20px;
+border-radius:12px;
+border:2px solid #e2e8f0;
+box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* PANEL TITLES */
+.panel h2{
+font-family: 'Poppins', sans-serif;
+color:#4f46e5;
+margin-bottom:10px;
+}
+
+/* ===== DROPDOWN ===== */
+select{
+width:700px;          /* 🔥 fixed clean size */
+max-width:100%;       /* responsive */
+padding:10px;
+border-radius:8px;
+border:2px solid #6366f1; 
+background:#f8fafc;
+color:#0f172a;
+font-size:14px;
+}
+
+/* 🔥 FIX: FORCE TIMES NEW ROMAN FOR OPTIONS */
+select, option{
+font-family: "Times New Roman", serif !important;
+}
+
+/* ===== BUTTONS ===== */
+.controls{
+margin:10px 0;
+}
+
+button{
+font-family: 'Poppins', sans-serif;
+padding:8px 15px;
+margin:5px;
+border:none;
+border-radius:8px;
+background:#6366f1;
+color:white;
+cursor:pointer;
+font-weight:500;
+transition:0.3s;
+}
+
+button:hover{
+background:#4f46e5;
+transform:scale(1.05);
+}
+
+button:active{
+transform:scale(0.95);
+}
+
+/* ACTIVE BUTTON */
+button.active{
+background:#22c55e !important;
+box-shadow:0 0 8px #22c55e;
+}
+
+/* ===== VIEWERS ===== */
+#viewer1, #viewer2{
+width:100%;
+height:400px;
+background:#ffffff;
+border:2px solid #6366f1;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+margin-top:10px;
+position:relative;
+overflow:hidden;
+}
+
+/* CANVAS FIX */
+#viewer1 canvas,
+#viewer2 canvas{
+position:absolute !important;
+top:0;
+left:0;
+width:100% !important;
+height:100% !important;
+}
+
+/* HOVER EFFECT */
+#viewer1:hover, #viewer2:hover{
+box-shadow:0 8px 25px rgba(99,102,241,0.3);
+transform:scale(1.01);
+transition:0.3s;
+}
+
+/* ===== INFO BOX ===== */
+.info-box{
+background:#ffffff;
+border:1px solid #4f46e5;
+padding:15px;
+border-radius:10px;
+margin:20px auto;
+max-width:700px;
+text-align:left;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info-box p{
+margin:8px 0;
+color:#334155;
+font-size:14px;
+}
+
+.info-box span{
+color:#0f172a;
+font-weight:500;
+word-wrap: break-word;
+overflow-wrap: break-word;
+white-space: normal;
+
+/* ✅ CHANGE HERE */
+font-family: "Times New Roman", serif;
+}
+
+/* ===== RUN OUTPUT ===== */
+#logs{
+font-family: monospace;
+background:#f0fdf4;
+color:#065f46;
+padding:12px;
+border-radius:10px;
+margin:10px auto 20px;
+max-width:900px;
+height:160px;
+overflow:auto;
+font-size:13px;
+text-align:left;
+border:1px solid #22c55e;
+}
+
+/* ===== PDB FILE ===== */
+#pdbText{
+font-family: monospace;
+background:#eff6ff;
+color:#1e3a8a;
+padding:12px;
+border-radius:10px;
+margin:10px auto 20px;
+max-width:900px;
+height:200px;
+overflow:auto;
+font-size:13px;
+text-align:left;
+border:1px solid #3b82f6;
+}
