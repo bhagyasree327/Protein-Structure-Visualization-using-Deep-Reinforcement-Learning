@@ -102,7 +102,7 @@ protein-visualizer/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/protein-visualizer.git
+git clone https://github.com/bhagyasree327/protein-visualizer.git
 ```
 
 ```bash
